@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Instagram, Heart, Star, Sparkles, Palette } from "lucide-react"
+import { Instagram, Heart, Star, Sparkles, Palette, Radius } from "lucide-react"
 import { siteData } from "./data"
 import { HorizontalScrollReels } from "@/components/horizontal-scroll-reels"
 import { ContactForm } from "@/components/contact-form"
@@ -15,7 +15,11 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-[url('/placeholder.svg?height=800&width=1200')] bg-cover bg-center opacity-5"></div>
         <div className="relative text-center max-w-4xl mx-auto">
           <div className="mb-6 sm:mb-8">
-            <Sparkles className="w-8 h-8 sm:w-12 sm:h-12 text-yellow-500 mx-auto mb-4 animate-pulse" />
+            {/* <Sparkles className="w-8 h-8 sm:w-12 sm:h-12 text-yellow-500 mx-auto mb-4 animate-pulse" /> */
+            <div className="flex justify-center h-36 mb-5">
+              <img style={{border:"1px solid pink", borderRadius:"50%", boxShadow:"3px 5px 5px 3px pink"} } className=" border-s-violet-800" src="https://res.cloudinary.com/dkjawn1rn/image/upload/v1751277247/508870230_645853211812925_615220517989299573_n_yycfds.png" alt="" />
+            </div>
+            }
             <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-serif text-rose-800 mb-4 leading-tight px-2">
               {siteData.hero.title}
             </h1>
